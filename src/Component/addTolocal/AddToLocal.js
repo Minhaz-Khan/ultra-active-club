@@ -1,7 +1,12 @@
 import React from 'react';
 
 const AddToLocal = (props) => {
-    console.log(props);
+    // const getToCart = {};
+    // const oldBreakTime = localStorage.getItemI('breakTime')
+    // if(oldBreakTime){
+
+    // }
+    localStorage.setItem('BreakTime', props)
     return (
         <div>
 
