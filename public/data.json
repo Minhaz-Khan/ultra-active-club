@@ -1,0 +1,44 @@
+[
+    {
+        "id": "633370c261f461fd691fac3c",
+        "picture": "./Image/cycleing.jpg",
+        "time": 15,
+        "name": "Cycling",
+        "about": "Cycling can help to protect you from serious diseases such as stroke, heart attack, some cancers, depression, diabetes, obesity and arthritis."
+    },
+    {
+        "id": "633370c21e9692b1e87bb22b",
+        "picture": "./Image/jogging.webp",
+        "time": 20,
+        "name": "Jogging",
+        "about": "Jogging or running is a popular form of physical activity. About one in 5 Australians try running (or jogging) at some stage in their life."
+    },
+    {
+        "id": "6334a86661e93d7e3ca92e57",
+        "picture": "./Image/Push-up.jpg",
+        "time": 10,
+        "name": "Push-Up",
+        "about": "Push-ups may seem like a basic exercise that works only your upper arms and chest, but when you do them the right way, they use muscles all over your body."
+    },
+    {
+        "id": "6334a86686ac2872f6f6d518",
+        "picture": "./Image/swimming.jpg",
+        "time": 10,
+        "name": "Spears Justice",
+        "about": "Push-ups may seem like a basic exercise that works only your upper arms and chest, but when you do them the right way, they use muscles all over your body."
+    },
+    {
+        "id": "6334a866a23652555ddd4004",
+        "picture": "./Image/weight-lifting.jpg",
+        "time": 15,
+        "name": "Weight lifting",
+        "about": "The most popular type of strength training is weightlifting, where you use dumbbells and barbells to contract your muscles. For those who don't have access to weights, there are other options as well."
+    },
+    {
+        "id": "6334a8663f41a8a321a0d423",
+        "picture": "./Image/Yoga.webp",
+        "time": 20,
+        "name": "Gilbert Kirk",
+        "about": "The relaxation techniques incorporated in yoga can lessen chronic pain, such as lower back pain, arthritis, headaches and carpal tunnel syndrome,” explains Dr. Nevins. “Yoga can also lower blood pressure and reduce insomnia.\r\n"
+    }
+]
