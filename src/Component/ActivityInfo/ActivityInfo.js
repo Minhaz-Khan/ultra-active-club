@@ -2,13 +2,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { useState } from 'react';
+import AddToLocal from '../addTolocal/AddToLocal';
 
 
 const ActivityInfo = (props) => {
     const { time } = props
     const [BreakTime, setBreakTime] = useState(0);
-    const handleBreakbtn = (BreakTime) => {
-        setBreakTime(BreakTime)
+    const handleBreakbtn = (breakTime) => {
+        setBreakTime(breakTime)
+        AddToLocal(breakTime)
 
     }
     return (
