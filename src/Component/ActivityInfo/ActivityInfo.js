@@ -1,16 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import { useState } from 'react';
 
 
 const ActivityInfo = (props) => {
     const { time } = props
-    let breakTime = 0;
+    const [BreakTime, setBreakTime] = useState(0);
     const handleBreakbtn = (BreakTime) => {
-        console.log(BreakTime);
-        breakTime = BreakTime
+        setBreakTime(BreakTime)
+
     }
-    console.log(breakTime);
     return (
         <div className='px-10 pt-12 text-white space-y-8'>
             <div>
@@ -56,11 +56,12 @@ const ActivityInfo = (props) => {
             <h1 className='text-2xl '>Exercise Details</h1>
             <div className=' grid grid-cols-2 justify-items-center bg-blue-300 py-4 rounded-2xl'>
                 <h3 className='text-xl font-medium'>Excrcise time</h3>
-                <h3 className='text-xl text-gray-200'>{time} Minute</h3>
+                <h3 className='text-xl text-gray-200'>{time ? time : '00'} Minute</h3>
             </div>
             <div className=' grid grid-cols-2 justify-items-center bg-blue-300 py-4 rounded-2xl'>
                 <h3 className='text-xl font-medium'>Break time</h3>
-                <h3 className='text-xl text-gray-200'>{breakTime ? breakTime : '00'}Minute</h3>
+                <h3 className='text-xl text-gray-200'>{BreakTime}Minute</h3>
+
             </div>
 
             <button className='w-full bg-blue-600 py-4 rounded-2xl text-xl'>Activity Completed</button>

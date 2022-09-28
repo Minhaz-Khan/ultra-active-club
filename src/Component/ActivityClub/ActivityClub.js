@@ -16,6 +16,8 @@ const ActivityClub = () => {
     const selectedActivity = (props) => {
         setTime(time + props)
     }
+
+
     return (
         <div className='grid grid-cols-12 '>
             <div className='col-span-9  bg-blue-300 pb-20 pl-14 space-y-7'>
