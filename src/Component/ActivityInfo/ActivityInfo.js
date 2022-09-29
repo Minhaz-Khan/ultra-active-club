@@ -4,6 +4,8 @@ import React from 'react';
 import { useState } from 'react';
 import AddToActivityLocal, { getLocalTime } from '../AddToActivityLocal/AddToActivityLocal';
 import { useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ActivityInfo = (props) => {
@@ -19,15 +21,16 @@ const ActivityInfo = (props) => {
         const getBreakTime = getLocalTime();
         setLocalBreakTIme(getBreakTime)
     }, [])
+
+    const notify = () => {
+        toast('Congratulation Your task is complet')
+    }
     return (
         <div className='px-5 lg:px-10 py-12 text-white space-y-8'>
-            <div>
-                <img src="" alt="" />
-                <div className='text-black'>
-                    <h3 className='text-2xl font-medium '>Nazmul Hossain</h3>
-                    <p><FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>Dhaka,Bangladesh</p>
-                </div>
 
+            <div className='text-black'>
+                <h3 className='text-2xl font-medium '>Nazmul Hossain</h3>
+                <p><FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>Dhaka,Bangladesh</p>
             </div>
             <div className='grid grid-cols-3 justify-items-center   rounded-2xl py-4 bg-pink-400'>
                 <div>
@@ -71,9 +74,9 @@ const ActivityInfo = (props) => {
                 <h3 className='text-xl text-gray-200'>{BreakTime ? BreakTime : localBreakTime}Minute</h3>
 
             </div>
+            <button className='w-full bg-blue-600 py-4 rounded-2xl text-xl' onClick={notify}>Activity Completed</button>
 
-            <button className='w-full bg-blue-600 py-4 rounded-2xl text-xl'>Activity Completed</button>
-
+            <ToastContainer></ToastContainer>
 
         </div>
     );

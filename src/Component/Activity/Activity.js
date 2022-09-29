@@ -11,7 +11,7 @@ const Activity = (props) => {
     return (
         <div className="card w-11/12 w-96 bg-white rounded-xl shadow-2xl pb-8 relative">
             <figure className="px-5 pt-5">
-                <img src={picture} alt="Shoes" className="rounded-xl" />
+                <img src={picture} alt="Shoes" className="rounded-xl " />
             </figure>
             <div className=" space-y-2 text-center mx-5 mb-8">
                 <h2 className="text-2xl font-medium">{name}</h2>
