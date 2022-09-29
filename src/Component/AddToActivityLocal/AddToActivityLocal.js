@@ -1,7 +1,6 @@
 import React from 'react';
 
 const AddToActivityLocal = (props) => {
-    console.log(props);
     localStorage.setItem('BreakTime', props)
     return (
         <div>

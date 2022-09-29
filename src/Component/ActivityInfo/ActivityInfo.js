@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const ActivityInfo = (props) => {
     const { time } = props
     const [BreakTime, setBreakTime] = useState(0);
-    const [localBreakTime, setLocalBreakTIme] = useState(0)
+
     const handleBreakbtn = (breakTime) => {
         setBreakTime(breakTime)
         AddToActivityLocal(breakTime)
@@ -19,7 +19,9 @@ const ActivityInfo = (props) => {
     }
     useEffect(() => {
         const getBreakTime = getLocalTime();
-        setLocalBreakTIme(getBreakTime)
+        if (getBreakTime) {
+            setBreakTime(getBreakTime)
+        }
     }, [])
 
     const notify = () => {
@@ -71,7 +73,7 @@ const ActivityInfo = (props) => {
             </div>
             <div className=' grid grid-cols-2 justify-items-center bg-blue-400 py-4 rounded-2xl'>
                 <h3 className='text-xl font-medium'>Break time</h3>
-                <h3 className='text-xl text-gray-200'>{BreakTime ? BreakTime : localBreakTime}Minute</h3>
+                <h3 className='text-xl text-gray-200'>{BreakTime ? BreakTime : "00"} Minute</h3>
 
             </div>
             <button className='w-full bg-blue-600 py-4 rounded-2xl text-xl' onClick={notify}>Activity Completed</button>
