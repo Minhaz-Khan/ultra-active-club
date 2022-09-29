@@ -20,7 +20,7 @@ const ActivityInfo = (props) => {
         setLocalBreakTIme(getBreakTime)
     }, [])
     return (
-        <div className='px-10 pt-12 text-white space-y-8'>
+        <div className='px-5 lg:px-10 py-12 text-white space-y-8'>
             <div>
                 <img src="" alt="" />
                 <div>

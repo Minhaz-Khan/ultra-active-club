@@ -9,7 +9,7 @@ const Activity = (props) => {
     }
 
     return (
-        <div className="card w-96 bg-white rounded-md shadow-2xl pb-8 relative">
+        <div className="card w-11/12 w-96 bg-white rounded-md shadow-2xl pb-8 relative">
             <figure className="px-5 pt-5">
                 <img src={picture} alt="Shoes" className="rounded-xl" />
             </figure>
