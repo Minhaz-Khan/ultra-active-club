@@ -2,17 +2,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { useState } from 'react';
-import AddToLocal from '../addTolocal/AddToLocal';
+import AddToActivityLocal, { getLocalTime } from '../AddToActivityLocal/AddToActivityLocal';
+import { useEffect } from 'react';
 
 
 const ActivityInfo = (props) => {
     const { time } = props
     const [BreakTime, setBreakTime] = useState(0);
+    const [localBreakTime, setLocalBreakTIme] = useState(0)
     const handleBreakbtn = (breakTime) => {
         setBreakTime(breakTime)
-        AddToLocal(breakTime)
+        AddToActivityLocal(breakTime)
 
     }
+    useEffect(() => {
+        const getBreakTime = getLocalTime();
+        setLocalBreakTIme(getBreakTime)
+    }, [])
     return (
         <div className='px-10 pt-12 text-white space-y-8'>
             <div>
@@ -62,7 +68,7 @@ const ActivityInfo = (props) => {
             </div>
             <div className=' grid grid-cols-2 justify-items-center bg-blue-300 py-4 rounded-2xl'>
                 <h3 className='text-xl font-medium'>Break time</h3>
-                <h3 className='text-xl text-gray-200'>{BreakTime}Minute</h3>
+                <h3 className='text-xl text-gray-200'>{BreakTime ? BreakTime : localBreakTime}Minute</h3>
 
             </div>
 
