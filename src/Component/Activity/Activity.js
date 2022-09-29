@@ -9,7 +9,7 @@ const Activity = (props) => {
     }
 
     return (
-        <div className="card w-11/12 w-96 bg-white rounded-md shadow-2xl pb-8 relative">
+        <div className="card w-11/12 w-96 bg-white rounded-xl shadow-2xl pb-8 relative">
             <figure className="px-5 pt-5">
                 <img src={picture} alt="Shoes" className="rounded-xl" />
             </figure>
@@ -18,7 +18,7 @@ const Activity = (props) => {
                 <p>{about}</p>
                 <p className='text-xl'>Time required: {time}m</p>
                 <div className="card-actions">
-                    <button className="w-10/12 py-2 rounded bg-pink-300 font-medium absolute bottom-3 left-8" onClick={() => handleAddbtn(time)}>Add to list</button>
+                    <button className="w-10/12 py-2 rounded-lg bg-pink-300 font-medium absolute bottom-3 left-8" onClick={() => handleAddbtn(time)}>Add to list</button>
                 </div>
             </div>
         </div>
